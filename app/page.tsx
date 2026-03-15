@@ -7,19 +7,19 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <div className="min-h-screen bg-[#0F172A] text-white flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0F172A] text-white">
 
       <h1 className="text-5xl font-bold mb-6">
         🌱 Krushi Netra
       </h1>
 
-      <p className="text-gray-400 text-xl mb-10 text-center max-w-xl">
-        AI + IoT Monitoring System for Smart Agriculture and Forest Fire Detection
+      <p className="text-gray-400 text-lg mb-10">
+        AI + IoT Monitoring System
       </p>
 
       <button
         onClick={() => router.push("/login")}
-        className="bg-green-500 px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-600 transition"
+        className="bg-green-500 px-6 py-3 rounded-lg"
       >
         Open Dashboard
       </button>
