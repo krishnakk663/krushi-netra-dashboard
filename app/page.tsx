@@ -1,49 +1,28 @@
-import Sidebar from "@/components/Sidebar"
-import MoistureGauge from "@/components/dashboard/MoistureGauge"
-import SensorCard from "@/components/dashboard/SensorCard"
-import PumpControl from "@/components/dashboard/PumpControl"
-import WeatherCard from "@/components/dashboard/WeatherCard"
-import AIInsight from "@/components/dashboard/AIInsight"
-import SensorChart from "@/components/dashboard/SensorChart"
+"use client"
+
+import { useRouter } from "next/navigation"
+
 export default function Home() {
+
+  const router = useRouter()
+
   return (
-    <div className="flex">
+    <div className="min-h-screen bg-[#0F172A] text-white flex flex-col items-center justify-center">
 
-      <Sidebar />
+      <h1 className="text-5xl font-bold mb-6">
+        🌱 Krushi Netra
+      </h1>
 
-      <main className="flex-1 bg-[#0F231D] text-white p-10">
+      <p className="text-gray-400 text-xl mb-10 text-center max-w-xl">
+        AI + IoT Monitoring System for Smart Agriculture and Forest Fire Detection
+      </p>
 
-        <h1 className="text-4xl font-bold mb-10">
-          Dashboard
-        </h1>
-
-        <div className="flex flex-wrap gap-10">
-
-          <MoistureGauge />
-
-          <SensorCard
-            title="Temperature"
-            value="28°C"
-            color="text-yellow-400"
-          />
-
-          <SensorCard
-            title="Humidity"
-            value="72%"
-            color="text-blue-400"
-          />
-
-          <PumpControl />
-
-          <WeatherCard />
-
-          <AIInsight />
-
-          <SensorChart />npm run dev
-
-        </div>
-
-      </main>
+      <button
+        onClick={() => router.push("/login")}
+        className="bg-green-500 px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-600 transition"
+      >
+        Open Dashboard
+      </button>
 
     </div>
   )
